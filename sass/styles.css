@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --red: #ff5252;
+  --white: #ffffff;
+  --light-grayish-violet: #dedddf;
+  --dark-grayish-violet: #8e8593;
+  --very-dark-violet: #21092f;
+  --font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-image: url("../images/bg-main-mobile.png");
+  color: white;
+  width: 100%;
+  height: 240px;
+}
+header .back, header .front {
+  width: 95%;
+  max-width: 310px;
+  position: absolute;
+}
+header .logo {
+  position: absolute;
+  top: 87px;
+  left: 33px;
+  max-width: 55px;
+}
+header .front {
+  top: 65px;
+  left: 10px;
+}
+header .back {
+  top: 20px;
+  left: 35px;
+}
+header .card-number {
+  font-size: 1.15rem;
+  position: absolute;
+  top: 125px;
+  left: 40px;
+}
+header .card-name {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 165px;
+  left: 40px;
+}
+header .card-date {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 165px;
+  left: 215px;
+}
+header .card-cvc {
+  font-size: 0.65rem;
+  position: absolute;
+  top: 84px;
+  left: 270px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.input input {
+  padding-right: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 325px;
+}
+main .form label {
+  color: var(--very-dark-violet);
+  font-size: 0.75rem;
+  margin-top: 6rem;
+  text-transform: uppercase;
+}
+main .form input {
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid var(--light-grayish-violet);
+  margin-top: 0.5rem;
+}
+main .form .long input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 7rem;
+}
+main .form .card-number-form, main .form .input {
+  margin-top: 1rem;
+}
+main .form .card-date-form {
+  padding-right: 1rem;
+}
+main .form .card-date-form input, main .form .card-cvc-form input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+main .form .confirm-btn {
+  border: none;
+  background-color: var(--very-dark-violet);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  transition: 0.3s;
+}
+main .form .confirm-btn:hover {
+  background-color: #aa00ff;
+}
+main .form .error {
+  color: red;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+main .form .name-error, main .form .number-error, main .form .cvc-error, main .form .date-error {
+  display: none;
+}
+main .thank-you {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .thank-you .continue-btn {
+  border: none;
+  background-color: var(--very-dark-violet);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+main .thank-you .continue-btn:hover {
+  background-color: #5f1c86;
+}
+main .thank-you h1 {
+  text-transform: uppercase;
+}
+main .thank-you p {
+  color: var(--dark-grayish-violet);
+}
+
+@media (min-width: 910px) {
+  .container {
+    flex-direction: row;
+    height: 800px;
+  }
+  main {
+    margin-left: 10rem;
+    align-items: center;
+    justify-content: center;
+  }
+  header {
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-width: 480px;
+  }
+  header .back {
+    top: 170px;
+    left: 130px;
+  }
+  header .front {
+    top: 80px;
+    left: 90px;
+  }
+  header .card-number {
+    left: 106px;
+    top: 150px;
+  }
+  header .card-name {
+    left: 106px;
+    top: 200px;
+  }
+  header .card-date {
+    left: 281px;
+    top: 200px;
+  }
+  header .card-cvc {
+    left: 375px;
+    top: 186px;
+  }
+  header .logo {
+    left: 110px;
+    top: 100px;
+  }
+}/*# sourceMappingURL=styles.css.map */
