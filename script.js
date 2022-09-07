@@ -13,27 +13,27 @@ const CardCvcError = document.querySelector(".cvc-error");
 
 function myFunction() {
     // inputs = [CardNameInput,CardNumberInput,CardMonthInput,CardYearInput,CardCvcInput];
-    if (handleInput()) {
-        showThankYou();
-    }
+    handleInput();
+    showThankYou();
 }
 function handleInput() {
     if (!CardNameInput.value || !onlyLetters(CardNameInput.value)) {
         CardNameError.style.display = "block";
-        return false;
+        handleInput();
     }
     if (!CardNumberInput.value) {
         CardNumberError.style.display = "block";
-        return false;
+        handleInput();
     }
     if (!CardMonthInput.value || !CardYearInput.value) {
         CardDateError.style.display = "block";
-        return false;
+        handleInput();
     }
     if (!CardCvcError.value) {
-        CardCvcError.style.display = "block";
-        return false;
+        // CardCvcError.style.display = "block";
+        // handleInput();
     }
+    return;
 }
 
 function showThankYou() {
